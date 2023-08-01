@@ -23,11 +23,11 @@ public class ProductHandler {
             for (Annotation annotation : annotations) {
                 if (annotation instanceof Product product) {
                     System.out.printf("Product: %s, quota: %d%n",
-                            ((Product) annotation).name(), ((Product) annotation).quota());
+                            product.name(), product.quota());
                 }
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());;
         }
     }
 }
